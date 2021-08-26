@@ -39,7 +39,7 @@ body, html{
 
 span{
     font-size: 1.5rem;
-    color: var(--text-color-dark);
+    color: var(--text-color-orange);
     z-index: 1;
 }
 
@@ -51,20 +51,22 @@ span{
 }
 
 .header span{
-    color: var(--text-color-orange);
+    color: var(--text-color-light);
 }
 
 #container{
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 3rem 3rem 0 0;
 }
 
 .content__container{
-    margin-bottom: rem;
+    z-index: 1;
 }
 
 .information{
@@ -75,8 +77,10 @@ span{
 
 .information img{
     width: 100%;
-    height: 40rem;
+    height: 35rem;
     border-radius: 3rem;
+    box-shadow: 0px 25px 16px 1px rgba(0,0,0,0.5)
+
 }
 
 .content__information{
@@ -86,28 +90,27 @@ span{
     flex-direction: column;
     padding: 1rem;
     position: absolute;
-    top: 380px;
+    top: 45%;
     left: 25px;
 }
 
 .content__information h2{
     color: var(--text-color-title);
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
 .content__information span{
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 400;
 }
 
 .player{
-    background: rgba(184, 146, 255, 0.2);
     height: 290px;
     border-radius: 4rem 4rem 0 0;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .tempo__musica{
@@ -119,7 +122,8 @@ span{
 }
 
 .tempo__musica progress{
-    width: 35rem;
+    width: 90%;
+    margin: 0 auto;
     height: 0.7rem;    
 }
 
@@ -129,7 +133,7 @@ progress {
 }
 
 progress[value]::-webkit-progress-bar{
-    background-color: #2B2837;
+    background-color: rgba(184, 146, 255, 0.2);
 }
 
 progresss::-webkit-progress-value {
@@ -203,7 +207,7 @@ progresss::-webkit-progress-value {
 .ferramentas{
     display: flex;
     justify-content: space-between;
-    padding: 2rem 2rem 0;
+    padding: 1rem 2rem 0;
 }
 
 .ferramentas img{
@@ -211,3 +215,26 @@ progresss::-webkit-progress-value {
     height: 2rem;
     cursor: pointer;
 }
+
+.favorito{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 47%;
+    right: 2.5rem;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    box-shadow: inset -20px -26px 18px -15px rgb(0 0 0 / 45%);
+    background: #495057;
+}
+
+.favorito img{
+    width: 2rem;
+    height: 2rem;
+}
+
+
