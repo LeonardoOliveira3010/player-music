@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/responsive.css">
     <title>Music</title>
 </head>
 <body>
@@ -18,23 +19,21 @@
         <img src="/public/assets/icons/menu.svg" alt="menu">
     </header>
    <main id="container">
-       <div class="circle">
-
-       </div>
         <div class="content__container">
             <div class="information">
-                <img src="/public/assets/img/capa.jpg" alt="Capa Albúm">
+                <img class="capa" src="/public/assets/img/capa6.jpg" alt="">
 
                 <div class="content__information">
-                    <h2 class="titulo__musica">stand up</h2>
-                    <span class="cantor">Cynthia Erivo</span>
+                    <h2 class="titulo__musica">Dust in the wind</h2>
+                    <span class="artista">Scorpions</span>
+
                 </div>
             </div>
         </div>
 
         <div class="player">
             <div class="tempo__musica">
-                <progress value="80" max="100">90%</progress>
+                <progress value="0" max="100"></progress>
                 <div>
                     <span class="inicio">0:00</span>
                     <span class="fim">3:15</span>   
@@ -55,10 +54,16 @@
                 <img src="/public/assets/icons/pessoa.svg" alt="">
                 <img src="/public/assets/icons/compartilhar.svg" alt="">
             </div>
+            <div class="favorito">
+                <img src="/public/assets/icons/favoritar.svg" alt="">
+            </div>
+
         </div>
-        <audio type="audio/mp3"></audio>
+        <audio src="/public/assets/musicas/Dust In The Wind.mp3" type="audio/mp3"></audio>
+
    </main>
 
-   <script src="/public/script/index.js"></script>
+   <script src="/public/script/index.js">
+   </script>
 </body>
 </html>
