@@ -28,17 +28,6 @@ const Player = {
         })
     // this.data.forEach(element => console.log(element))
     },
-
-    restartMusica(){
-        this.musica.addEventListener('ended', () =>{
-            this.indexMusica++
-            if(this.indexMusica > this.data.length - 1){
-                this.indexMusica = 0
-            }
-            this.renderizarMusica(this.indexMusica)
-            this.musica.play()
-        })
-    },
     
 // Variaveis artistas
     capa: document.querySelector('.capa'),
@@ -53,17 +42,16 @@ const Player = {
     
 // Funções
 
-    // startMusica(index){
-    //     this.musica.setAttribute('src', this.data[index].file)
-    //     this.musica.src = this.data[0]
-        
-    //     this.musica.addEventListener('ended', () =>{
-    //         this.tituloMusica.textContent = this.data[index].titulo
-    //         this.artista.textContent = this.data[index].artista
-    //         this.capa.src = this.data[index].img
-    //         this.musica.play()
-    //     })
-    // },
+    passarMusica(){
+        this.musica.addEventListener('ended', () =>{
+            this.indexMusica++
+            if(this.indexMusica > this.data.length - 1){
+                this.indexMusica = 0
+            }
+            this.renderizarMusica(this.indexMusica)
+            this.musica.play()
+        })
+    },
 
     playMusica(){
         this.play.addEventListener('click', () =>{
@@ -143,4 +131,4 @@ Player.proximaMusica()
 Player.musicaAnterior()
 Player.atualizarBarra()
 Player.tempo()
-Player.restartMusica()
+Player.passarMusica()
