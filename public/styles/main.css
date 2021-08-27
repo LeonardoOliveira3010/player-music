@@ -128,7 +128,8 @@ span{
 }
 
 progress {
-    display:block;
+    width: 0;
+    height: 6px;
     -webkit-appearance: none;
 }
 

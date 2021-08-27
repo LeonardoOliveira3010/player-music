@@ -74,12 +74,14 @@
 @media (min-width:961px){
     .header{
         justify-content: space-evenly;
+        display: none;
     }
 
     #container{
         width: 20%;
         border-radius: 3rem 3rem 3rem 3rem;
         height: 85vh;
+        margin-top: 5rem;
     }
 
     .content__information{
@@ -116,5 +118,9 @@
 
     .player{
         margin-top: 3rem;
+    }
+
+    .ferramentas{
+        display: none;
     }
 }
