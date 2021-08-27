@@ -119,8 +119,7 @@ const Player = {
             segundo = '0' + segundo
         }
         return minutos + ':' + segundo
-    } 
-    
+    }  
 }
     
 // Player.renderizarMusica(indexMusica)
