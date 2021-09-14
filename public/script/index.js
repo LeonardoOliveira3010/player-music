@@ -1,5 +1,7 @@
 // Objeto Player que conterá todas as informações
 
+// import { file, titulo, artista } from './data'
+
 const Player = {
 // Musicas
     data: [
@@ -11,7 +13,11 @@ const Player = {
         { titulo: "Far Away", artista: 'Nickelback', file: '/public/assets/musicas/Far Away.mp3', img:'/public/assets/img/capa4.jpg'},
         { titulo: "Photograh", artista: 'Nickelback', file: '/public/assets/musicas/Nickelback - Photograph.mp3', img:'/public/assets/img/capa5.jpg'},
         { titulo: "oasis", artista: 'Oasis', file: '/public/assets/musicas/oasis.mp3', img:'/public/assets/img/capa7.jpg'},
-        { titulo: "never gonna be alone", artista: 'Nickelback', file: '/public/assets/musicas/never gonna be alone.mp3', img:'/public/assets/img/capa5.jpg'}
+        { titulo: "never gonna be alone", artista: 'Nickelback', file: '/public/assets/musicas/never gonna be alone.mp3', img:'/public/assets/img/capa5.jpg'},
+        { titulo: "Use somebody", artista: 'King of Leon', file: '/public/assets/musicas/Kings Of Leon - Use Somebody (Official Video)_160k.mp3', img:'/public/assets/img/capa5.jpg'},
+        { titulo: "Dont look back", artista: 'Oasis', file: '/public/assets/musicas/Oasis - Don t Look Back In Anger (Official Video)_160k.mp3', img:'/public/assets/img/capa5.jpg'},
+        { titulo: "Stop Crying", artista: 'Oasis', file: '/public/assets/musicas/Oasis - Stop Crying Your Heart Out (Official Video)_160k.mp3', img:'/public/assets/img/capa5.jpg'},
+        { titulo: "Wonderwall", artista: 'Oasis', file: '/public/assets/musicas/Oasis - Wonderwall (Official Video)_128k.mp3', img:'/public/assets/img/capa5.jpg'}
     ],
 
 // Variavel audio
@@ -109,7 +115,7 @@ const Player = {
         let barraAtual = this.barra.style.width = Math.floor(( this.musica.currentTime / this.musica.duration) * 100) + '%'
         
         this.inicio.textContent = this.tempo(Math.floor(this.musica.currentTime)) 
-        console.log(typeof barraAtual) 
+        console.log(barraAtual) 
     },
     
     tempo(segundos){
@@ -121,9 +127,7 @@ const Player = {
         return minutos + ':' + segundo
     }  
 }
-    
-// Player.renderizarMusica(indexMusica)
-// Player.startMusica()
+
 Player.playMusica()
 Player.pauseMusica()
 Player.proximaMusica()
