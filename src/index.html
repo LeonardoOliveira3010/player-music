@@ -33,12 +33,11 @@
         <div class="player">
             <div class="tempo__musica">
                 <div class="barra">
-                <progress value="0" max="1"></progress>
-
+                    <progress max="100"></progress>
                 </div>
                 <div>
-                    <span class="inicio">0:00</span>
-                    <span class="fim">3:15</span>   
+                    <span class="inicio"></span>
+                    <span class="fim"></span>   
                 </div>
             </div>
 
@@ -61,7 +60,9 @@
             </div>
 
         </div>
-        <audio type="audio/mp3"></audio>
+        <audio>
+            <source id="music__source" src="/public/assets/musicas/Kings Of Leon - Use Somebody (Official Video)_160k.mp3">
+        </audio>
 
    </main>
 

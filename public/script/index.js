@@ -23,6 +23,8 @@ const Player = {
 // Variavel audio
     indexMusica: 0,
     musica: document.querySelector('audio'),
+    source: document.querySelector('#music__controller'),
+    musicSource: document.querySelector('#music__source'),
 
     renderizarMusica(index){
         this.musica.setAttribute('src', this.data[index].file)
@@ -111,11 +113,18 @@ const Player = {
     fim: document.querySelector('.fim'),
     
     atualizarBarra(){
+        window.addEventListener('clink', () =>{
+        this.barra.value = Math.floor((this.musica.currentTime / this.musica.duration) * 100)
+        this.inicio.textContent = this.tempo(Math.floor(this.musica.currentTime))
 
-        let barraAtual = this.barra.style.width = Math.floor(( this.musica.currentTime / this.musica.duration) * 100) + '%'
-        
-        this.inicio.textContent = this.tempo(Math.floor(this.musica.currentTime)) 
-        console.log(barraAtual) 
+        })
+
+
+        // console.log(this.barra)
+        // console.log(this.musica.value)
+        // console.log(this.source.value)
+        // console.log(this.musicSource.currentTime)
+        console.log(this.musica.currentTime)
     },
     
     tempo(segundos){
@@ -125,6 +134,7 @@ const Player = {
             segundo = '0' + segundo
         }
         return minutos + ':' + segundo
+        
     }  
 }
 
@@ -133,5 +143,5 @@ Player.pauseMusica()
 Player.proximaMusica()
 Player.musicaAnterior()
 Player.atualizarBarra()
-Player.tempo()
 Player.passarMusica()
+Player.atualizarBarra()
